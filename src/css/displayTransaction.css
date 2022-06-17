@@ -1,0 +1,31 @@
+.transaction-item{
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    color: black;
+    width: 500px;
+    height: 70px;
+    margin-top: 5px;
+    background-color: white;
+    
+   
+}
+.transaction-item div:nth-child(1){
+    width: 150px;
+}
+/* 
+.transaction-item >h4{
+   
+}
+.h4{
+   padding-top: 20px;
+} */
+.expense-line{
+    border-right: 4px solid red;
+    /* margin-left: 135px; */
+}
+.income-line{
+    border-right: 4px solid green;
+    /* margin-left: 125px; */
+
+}
+
