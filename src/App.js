@@ -8,8 +8,9 @@ import Home from './components/home';
 import {BrowserRouter as Router , Switch , Route} from 'react-router-dom';
 import Login from './components/login';
 import SignUp from './components/signup';
-// import BrowserRouter, {BrowserRouter as Router , Switch , Route} from 'react-router-dom/BrowserRouter';
 
+import {collection, getDocs} from 'firebase/firestore';
+// import BrowserRouter, {BrowserRouter as Router , Switch , Route} from 'react-router-dom/BrowserRouter';
 // ReactDOM.render((
 //   <BrowserRouter basename={process.env.PUBLIC_URL}>
 //     <App />
@@ -17,11 +18,20 @@ import SignUp from './components/signup';
 // ), ...)
 
 
+
+
 function App() {
 
+
   const [transaction, setTransaction] = useState ([]);
+
+  useEffect(()=>{
+
+
+  })
+
   useEffect( () => {
-    console.log('the app fails');
+    
     console.log(transaction);
   }, [transaction])
 
@@ -40,10 +50,14 @@ function App() {
 
   })
   return (
+    //<BrowserRouter basename={process.env.PUBLIC_URL}>
+    // basename="02MINDMALEBANA/budgetappProject"
 
-    <Router basename='02MINDMALEBANA/budgetappProject'>
+    <Router>
+
       <Switch>
-        <Route exact path="/" component={Login}></Route>
+        <Route  path="/" exact component={Login}></Route>
+        {/* <Route exact path="/" render={() => <Login />}></Route> */}
         <Route path="/sign-up" component={SignUp}></Route>
 
         <Route path="/home">
@@ -60,7 +74,8 @@ function App() {
     //   <AddItem   add= {addTransaction} /> */}
     //   <Home list={transaction}  add= {addTransaction}/>
      
-    // </div>
+    // </div> 
+  
   );
 }
 

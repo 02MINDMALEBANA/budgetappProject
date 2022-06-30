@@ -5,8 +5,9 @@ import '../css/displayTransaction.css'
 function DisplayTransaction (props) {
     return (
         <div>
+            <h1 style={{paddingTop:'5%'}}>Transaction history</h1>
             {props.list.map((item) => (
-                <div key={item.id}>
+                <div key={item.id} style={{marginTop:'5%'}}>
 
                     {item.transactionType == "Expense" ? (
 

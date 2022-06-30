@@ -1,6 +1,9 @@
 
 import React,{useState} from "react";
 import "../css/add.css"
+
+import {db} from '../config/firebase';
+import {addDoc, collection} from 'firebase/firestore'
 function AddItem (props) {
 
     const [amount, setAmount] = useState('')
@@ -9,7 +12,22 @@ function AddItem (props) {
     
 
     const add=(()=>{
-        console.log(item)
+
+        const  collectionReF = collection(db, "transaction");
+        const transaction={
+            item:item ,
+            amount:amount,
+            transactionType:transactionType,
+        };
+
+        addDoc(collectionReF, transaction).then(()=>{
+            alert("added successfully")
+        }).catch((err)=>{
+            console.log(err);
+        })
+
+
+        console.log(item);
         console.log(amount);
         console.log(transactionType);
 
