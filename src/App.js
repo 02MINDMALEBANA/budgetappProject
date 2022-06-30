@@ -53,7 +53,7 @@ function App() {
     //<BrowserRouter basename={process.env.PUBLIC_URL}>
     // basename="02MINDMALEBANA/budgetappProject"
 
-    <Router>
+    <Router basename='budgetappProject'>
 
       <Switch>
         <Route  path="/" exact component={Login}></Route>
