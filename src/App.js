@@ -8,6 +8,7 @@ import Home from './components/home';
 import {BrowserRouter as Router , Switch , Route} from 'react-router-dom';
 import Login from './components/login';
 import SignUp from './components/signup';
+import ForgotPassword from './components/forgotPassword';
 
 import {collection, getDocs} from 'firebase/firestore';
 // import BrowserRouter, {BrowserRouter as Router , Switch , Route} from 'react-router-dom/BrowserRouter';
@@ -59,6 +60,7 @@ function App() {
         <Route  path="/" exact component={Login}></Route>
         {/* <Route exact path="/" render={() => <Login />}></Route> */}
         <Route path="/sign-up" component={SignUp}></Route>
+        <Route path="/forgotPassword" component={ForgotPassword}></Route>
 
         <Route path="/home">
           <Home list={transaction}  add= {addTransaction}/>

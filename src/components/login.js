@@ -40,7 +40,12 @@ function Login () {
             <span> Don't have an account?</span> {" "}
             <span>
                 <Link to="/sign-up"> Create an account here</Link>
-               </span>
+            </span><br></br><br></br>
+            {/* <span> forgot password?</span> {" "} */}
+            <span>
+            forgot password?   
+                <Link to="/forgotPassword">Create new Password</Link>
+            </span>
 
         </div>
     )
